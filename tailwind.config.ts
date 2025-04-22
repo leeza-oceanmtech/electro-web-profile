@@ -32,6 +32,10 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				tertiary: {
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -84,11 +88,89 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'glow': {
+					'0%': {
+						boxShadow: '0 0 0px hsl(var(--primary))'
+					},
+					'50%': {
+						boxShadow: '0 0 15px hsl(var(--primary))'
+					},
+					'100%': {
+						boxShadow: '0 0 0px hsl(var(--primary))'
+					}
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						opacity: '1',
+						filter: 'brightness(100%) blur(0px)'
+					},
+					'50%': {
+						opacity: '0.8',
+						filter: 'brightness(150%) blur(1px)'
+					}
+				},
+				'text-flicker': {
+					'0%, 100%': {
+						textShadow: '0 0 8px hsl(var(--primary))'
+					},
+					'10%, 30%, 70%, 90%': {
+						textShadow: '0 0 4px hsl(var(--primary))'
+					},
+					'20%, 40%, 60%, 80%': {
+						textShadow: '0 0 16px hsl(var(--primary))'
+					}
+				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'grid-lines': {
+					'0%': {
+						backgroundPosition: '0% 0%'
+					},
+					'100%': {
+						backgroundPosition: '100% 100%'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'typing': {
+					'from': { width: '0' },
+					'to': { width: '100%' }
+				},
+				'scan-line': {
+					'0%': { 
+						backgroundPosition: '0 0'
+					},
+					'100%': { 
+						backgroundPosition: '0 -100vh'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'glow': 'glow 2s ease-in-out infinite',
+				'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+				'text-flicker': 'text-flicker 5s linear infinite',
+				'fade-in-up': 'fade-in-up 0.5s ease-out',
+				'grid-lines': 'grid-lines 30s linear infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'typing': 'typing 3.5s steps(40, end)',
+				'scan-line': 'scan-line 5s linear infinite'
 			}
 		}
 	},
