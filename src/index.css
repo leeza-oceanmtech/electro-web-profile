@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -49,7 +50,6 @@
     --sidebar-ring: 266 100% 70%;
   }
 }
-}
 
 @layer base {
   * {
@@ -87,7 +87,6 @@
     background: hsl(var(--primary) / 0.5);
     box-shadow: 0 0 8px hsl(var(--primary));
   }
-}
 }
 
 @layer components {
